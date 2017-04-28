@@ -1,14 +1,14 @@
 /**
- * ChirashiEventEmitter.js v1.0.0
+ * ChirashiEventEmitter.js v1.0.1
  * (c) 2017 Alex Toudic
  * Released under MIT License.
  **/
 
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.ChirashiEventEmitter = global.ChirashiEventEmitter || {})));
-}(this, (function (exports) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.ChirashiEventEmitter = factory());
+}(this, (function () { 'use strict';
 
 /**
  * Creates a new event emitter.
@@ -40,7 +40,7 @@
  * emitter.emit('event', 'foo', 'bar')
  * // won't log anything
  */
-var EventEmitter = function EventEmitter() {
+var EventEmitter$1 = function EventEmitter() {
   var events = {};
 
   /**
@@ -107,8 +107,6 @@ var EventEmitter = function EventEmitter() {
   return { on: on, off: off, emit: emit };
 };
 
-exports.EventEmitter = EventEmitter;
-
-Object.defineProperty(exports, '__esModule', { value: true });
+return EventEmitter$1;
 
 })));

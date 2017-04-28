@@ -1,5 +1,5 @@
 /**
- * ChirashiEventEmitter.js v1.0.0
+ * ChirashiEventEmitter.js v1.0.1
  * (c) 2017 Alex Toudic
  * Released under MIT License.
  **/
@@ -34,7 +34,7 @@
  * emitter.emit('event', 'foo', 'bar')
  * // won't log anything
  */
-var EventEmitter = function EventEmitter() {
+var EventEmitter$1 = function EventEmitter() {
   var events = {};
 
   /**
@@ -101,4 +101,4 @@ var EventEmitter = function EventEmitter() {
   return { on: on, off: off, emit: emit };
 };
 
-export { EventEmitter };
+export default EventEmitter$1;

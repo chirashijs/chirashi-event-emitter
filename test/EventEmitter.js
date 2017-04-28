@@ -1,5 +1,5 @@
 import { assert } from 'chai'
-import { EventEmitter } from 'chirashi-event-emitter'
+import EventEmitter from 'chirashi-event-emitter'
 
 describe('chirashi#EventEmitter', () => {
   it('should be defined as a function', () => {
@@ -55,6 +55,8 @@ describe('chirashi#EventEmitter', () => {
 
     emitter.on('event', callback)
     emitter.off('event', callback)
+    emitter.off('null', callback)
+    emitter.off('event', () => {})
     emitter.emit('event', 'c', 'd')
     done()
   })
@@ -62,12 +64,14 @@ describe('chirashi#EventEmitter', () => {
   it('should implement off method without callback', done => {
     const emitter = EventEmitter()
 
-    const callback = (a, b) => {
+    emitter.on('event', (a, b) => {
       assert.equal(a, 'a')
       assert.equal(b, 'b')
-    }
-
-    emitter.on('event', callback)
+    })
+    emitter.on('event', (c, d) => {
+      assert.equal(c, 'c')
+      assert.equal(d, 'd')
+    })
     emitter.off('event')
     emitter.emit('event', 'c', 'd')
     done()
