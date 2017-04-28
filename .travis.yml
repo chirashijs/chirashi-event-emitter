@@ -3,7 +3,7 @@ node_js:
   - "6"
 addons:
   code_climate:
-    repo_token: f213acf1a67a2765af17d50a5ec758ef76d700c1212fdc368011b1f63c0aca0a
+    repo_token: a3775c1cb517f4a0f32629f098a06b5fd585830cb6e478ecbdcde5e02a4dcb73
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
