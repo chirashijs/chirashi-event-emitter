@@ -5,7 +5,8 @@
   "keywords": [
     "events",
     "emitter",
-    "event-emitter"
+    "event-emitter",
+    "listener"
   ],
   "main": "./dist/chirashi-event-emitter.common.js",
   "module": "./dist/chirashi-event-emitter.mjs",
