@@ -1,106 +1,68 @@
 /**
- * ChirashiEventEmitter.js v1.0.2
+ * ChirashiEventEmitter.js v2.0.0
  * (c) 2017 Alex Toudic
  * Released under MIT License.
  **/
 
 'use strict';
 
-/**
- * Creates a new event emitter.
- * @return {EventEmitter} emitter - The event emitter.
- * @example //esnext
- * import EventEmitter from 'chirashi-event-emitter'
- *
- * const emitter = EventEmitter()
- *
- * const off = emitter.on('event', (foo, bar) => {
- *   console.log(foo, bar)
- * })
- *
- * emitter.emit('event', 'foo', 'bar')
- * // logs: foo, bar
- * off()
- * emitter.emit('event', 'foo', 'bar')
- * // won't log anything
- * @example //es5
- * var emitter = ChirashiEventEmitter()
- *
- * var off = emitter.on('event', function (foo, bar) {
- *   console.log(foo, bar)
- * })
- *
- * emitter.emit('event', 'foo', 'bar')
- * // logs: foo, bar
- * off()
- * emitter.emit('event', 'foo', 'bar')
- * // won't log anything
- */
-var EventEmitter$1 = function EventEmitter() {
-  var events = {};
+var toConsumableArray = function (arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
 
-  /**
-   * Add event listener.
-   *
-   * @callback EventEmitter~on
-   * @param {string} event - The event's name.
-   * @param {eventCallback} callback - The callback to execute on event.
-   * @returns {offCallback} off - Callback to unbind event.
-   */
-  var on = function on(event, callback) {
-    if (!(event in events)) {
-      events[event] = [];
-    }
-
-    events[event].push(callback);
-
-    return function () {
-      off(event, callback);
-    };
-  };
-
-  /**
-   * Remove event listener.
-   *
-   * @callback EventEmitter~off
-   * @param {string} event - The event's name.
-   * @param {eventCallback} callback - The callback executed on event.
-   */
-  var off = function off(event, callback) {
-    if (!(event in events)) return;
-
-    if (typeof callback === 'function') {
-      var index = void 0;
-      if ((index = events[event].indexOf(callback)) !== -1) {
-        events[event].splice(index);
-      }
-    } else {
-      delete events[event];
-    }
-  };
-
-  /**
-   * Call all listeners for an event.
-   *
-   * @callback EventEmitter~emit
-   * @param {string} event - The event's name.
-   * @param {...*} args - Arguments.
-   */
-  var emit = function emit(event) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    if (!(event in events)) return;
-
-    var listeners = events[event];
-    var n = listeners.length;
-    for (var i = 0; i < n; ++i) {
-      listeners[i].apply(listeners, args);
-    }
-  };
-
-  return { on: on, off: off, emit: emit };
+    return arr2;
+  } else {
+    return Array.from(arr);
+  }
 };
 
-module.exports = EventEmitter$1;
+/**
+ * Creates a new event emitter.
+ */
+var eventEmitter = function eventEmitter() {
+  var _events = {};
+
+  var self = {
+    on: function on(event, callback) {
+      if (!(event in _events)) {
+        _events[event] = [];
+      }
+
+      _events[event].push(callback);
+
+      return function (_) {
+        return self.off(event, callback);
+      };
+    },
+    off: function off(event, callback) {
+      if (!(event in _events)) return;
+
+      if (typeof callback === 'function') {
+        var index = void 0;
+        if ((index = _events[event].indexOf(callback)) !== -1) {
+          _events[event].splice(index);
+        }
+      } else {
+        delete _events[event];
+      }
+    },
+    emit: function emit(event) {
+      if (!(event in _events)) return;
+
+      var listeners = _events[event];
+      var n = listeners.length;
+
+      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+      }
+
+      for (var i = 0; i < n; ++i) {
+        listeners[i].apply(listeners, toConsumableArray(args));
+      }
+    }
+  };
+
+  return self;
+};
+
+module.exports = eventEmitter;

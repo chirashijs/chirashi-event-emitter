@@ -1,0 +1,4 @@
+// @flow
+
+export type EventEmitter = {+emit: (event: string, ...args: any) => void, +off: (event: string, callback: Function) => void, +on: (event: string, callback: Function) => Function};
+declare export default function(): {+emit: (event: string, ...args: any) => void, +off: (event: string, callback: Function) => void, +on: (event: string, callback: Function) => Function};

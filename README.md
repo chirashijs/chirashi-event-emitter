@@ -35,13 +35,13 @@ Now you can import methods in your project:
 import EventEmitter from 'chirashi-event-emitter'
 
 const emitter = EventEmitter()
-
 const off = emitter.on('event', (foo, bar) => {
   console.log(foo, bar)
 })
 
 emitter.emit('event', 'foo', 'bar')
 // logs: foo, bar
+
 off()
 emitter.emit('event', 'foo', 'bar')
 // won't log anything
@@ -60,6 +60,7 @@ const off = emitter.on('event', (foo, bar) => {
 
 emitter.emit('event', 'foo', 'bar')
 // logs: foo, bar
+
 off()
 emitter.emit('event', 'foo', 'bar')
 // won't log anything

@@ -18,6 +18,7 @@ describe('chirashi#EventEmitter', () => {
 
   it('should create emitter with emit method', () => {
     const emitter = EventEmitter()
+
     assert.isFunction(emitter.emit)
   })
 
@@ -29,6 +30,7 @@ describe('chirashi#EventEmitter', () => {
       assert.equal(b, 'b')
       done()
     })
+    emitter.emit.bind(null, emitter)
     emitter.emit('event', 'a', 'b')
   })
 
