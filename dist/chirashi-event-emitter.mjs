@@ -1,5 +1,5 @@
 /**
- * ChirashiEventEmitter.js v2.0.0
+ * ChirashiEventEmitter.js v1.0.3
  * (c) 2017 Alex Toudic
  * Released under MIT License.
  **/
@@ -15,9 +15,9 @@ var toConsumableArray = function (arr) {
 };
 
 /**
- * Creates a new event emitter.
+ * The TEventEmitter factory function.
  */
-var eventEmitter = function eventEmitter() {
+var EventEmitter$1 = function EventEmitter() {
   var _events = {};
 
   var self = {
@@ -28,7 +28,7 @@ var eventEmitter = function eventEmitter() {
 
       _events[event].push(callback);
 
-      return function (_) {
+      return function () {
         return self.off(event, callback);
       };
     },
@@ -63,4 +63,4 @@ var eventEmitter = function eventEmitter() {
   return self;
 };
 
-export default eventEmitter;
+export default EventEmitter$1;

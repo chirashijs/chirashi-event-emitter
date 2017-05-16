@@ -2,14 +2,14 @@
 
 ### Table of Contents
 
+-   [TEventEmitter](#teventemitter)
 -   [EventEmitter](#eventemitter)
--   [eventEmitter](#eventemitter-1)
 
-## EventEmitter
+## TEventEmitter
 
-[lib/EventEmitter.js:6-10](https://github.com/chirashijs/chirashi-event-emitter/blob/5b00edf5e7d533b9daedebbd5b7d03907871d8f3/lib/EventEmitter.js#L6-L10 "Source code on GitHub")
+[lib/EventEmitter.js:6-10](https://github.com/chirashijs/chirashi-event-emitter/blob/b7c6525b9062ff801e2d264b8314aeb12d19ebfc/lib/EventEmitter.js#L6-L10 "Source code on GitHub")
 
-The EventEmitter type.
+The TEventEmitter type.
 
 Type: {on: function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function), off: function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): void, emit: function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)): void}
 
@@ -19,10 +19,10 @@ Type: {on: function (event: [string](https://developer.mozilla.org/en-US/docs/We
 -   `off` **function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): void** 
 -   `emit` **function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)): void** 
 
-## eventEmitter
+## EventEmitter
 
-[lib/EventEmitter.js:15-54](https://github.com/chirashijs/chirashi-event-emitter/blob/5b00edf5e7d533b9daedebbd5b7d03907871d8f3/lib/EventEmitter.js#L15-L54 "Source code on GitHub")
+[lib/EventEmitter.js:15-54](https://github.com/chirashijs/chirashi-event-emitter/blob/b7c6525b9062ff801e2d264b8314aeb12d19ebfc/lib/EventEmitter.js#L15-L54 "Source code on GitHub")
 
-Creates a new event emitter.
+The TEventEmitter factory function.
 
-Returns **[EventEmitter](#eventemitter)** 
+Returns **[TEventEmitter](#teventemitter)** 
