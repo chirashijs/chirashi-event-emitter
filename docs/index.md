@@ -7,7 +7,7 @@
 
 ## TEventEmitter
 
-[lib/EventEmitter.js:6-10](https://github.com/chirashijs/chirashi-event-emitter/blob/82fef10f9fa13a3c8a8577cf538b83cc9d8ab869/lib/EventEmitter.js#L6-L10 "Source code on GitHub")
+[lib/EventEmitter.js:6-10](https://github.com/chirashijs/chirashi-event-emitter/blob/8aa96046d1ae2c87c94caf147819b6d5d2972d6d/lib/EventEmitter.js#L6-L10 "Source code on GitHub")
 
 The TEventEmitter type.
 
@@ -21,7 +21,7 @@ Type: {on: function (event: [string](https://developer.mozilla.org/en-US/docs/We
 
 ## EventEmitter
 
-[lib/EventEmitter.js:15-56](https://github.com/chirashijs/chirashi-event-emitter/blob/82fef10f9fa13a3c8a8577cf538b83cc9d8ab869/lib/EventEmitter.js#L15-L56 "Source code on GitHub")
+[lib/EventEmitter.js:15-56](https://github.com/chirashijs/chirashi-event-emitter/blob/8aa96046d1ae2c87c94caf147819b6d5d2972d6d/lib/EventEmitter.js#L15-L56 "Source code on GitHub")
 
 The TEventEmitter factory function.
 
