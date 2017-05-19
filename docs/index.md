@@ -7,21 +7,21 @@
 
 ## TEventEmitter
 
-[lib/EventEmitter.js:6-10](https://github.com/chirashijs/chirashi-event-emitter/blob/b7c6525b9062ff801e2d264b8314aeb12d19ebfc/lib/EventEmitter.js#L6-L10 "Source code on GitHub")
+[lib/EventEmitter.js:6-10](https://github.com/chirashijs/chirashi-event-emitter/blob/82fef10f9fa13a3c8a8577cf538b83cc9d8ab869/lib/EventEmitter.js#L6-L10 "Source code on GitHub")
 
 The TEventEmitter type.
 
-Type: {on: function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function), off: function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): void, emit: function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)): void}
+Type: {on: function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): function (): void, off: function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): void, emit: function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)): void}
 
 **Properties**
 
--   `on` **function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
+-   `on` **function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): function (): void** 
 -   `off` **function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), callback: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)): void** 
 -   `emit` **function (event: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)): void** 
 
 ## EventEmitter
 
-[lib/EventEmitter.js:15-54](https://github.com/chirashijs/chirashi-event-emitter/blob/b7c6525b9062ff801e2d264b8314aeb12d19ebfc/lib/EventEmitter.js#L15-L54 "Source code on GitHub")
+[lib/EventEmitter.js:15-56](https://github.com/chirashijs/chirashi-event-emitter/blob/82fef10f9fa13a3c8a8577cf538b83cc9d8ab869/lib/EventEmitter.js#L15-L56 "Source code on GitHub")
 
 The TEventEmitter factory function.
 

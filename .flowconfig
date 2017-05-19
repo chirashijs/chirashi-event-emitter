@@ -1,11 +1,10 @@
-[ignore]
-.*/node_modules/.*
-.*/build/.*
-.*/dist/.*
-.*/test/.*
-
 [include]
 
-[libs]
+[ignore]
+.*/build/.*
+.*/dist/.*
+.*/node_modules/.*
+.*/test/.*
 
-[options]
+[libs]
+./lib
