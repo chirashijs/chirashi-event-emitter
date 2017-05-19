@@ -1,5 +1,5 @@
 /**
- * ChirashiEventEmitter.js v1.0.3
+ * ChirashiEventEmitter.js v2.0.0
  * (c) 2017 Alex Toudic
  * Released under MIT License.
  **/
@@ -47,17 +47,23 @@ var EventEmitter$1 = function EventEmitter() {
       }
     },
     emit: function emit(event) {
+      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+      }
+
       if (!(event in _events)) return;
 
       var listeners = _events[event];
       var n = listeners.length;
 
-      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        args[_key - 1] = arguments[_key];
-      }
+      var _loop = function _loop(i) {
+        setTimeout(function () {
+          listeners[i].apply(listeners, toConsumableArray(args));
+        });
+      };
 
       for (var i = 0; i < n; ++i) {
-        listeners[i].apply(listeners, toConsumableArray(args));
+        _loop(i);
       }
     }
   };
