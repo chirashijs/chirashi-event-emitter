@@ -40,7 +40,7 @@ var EventEmitter$1 = function EventEmitter() {
       if (typeof callback === 'function') {
         var index = void 0;
         if ((index = _events[event].indexOf(callback)) !== -1) {
-          _events[event].splice(index);
+          _events[event].splice(index, 1);
         }
       } else {
         delete _events[event];
@@ -53,7 +53,7 @@ var EventEmitter$1 = function EventEmitter() {
 
       if (!(event in _events)) return;
 
-      var listeners = _events[event];
+      var listeners = _events[event].slice(); // copy current listeners in case of unbinding
       var n = listeners.length;
 
       var _loop = function _loop(i) {

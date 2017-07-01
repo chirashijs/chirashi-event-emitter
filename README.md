@@ -49,7 +49,7 @@ emitter.emit('event', 'foo', 'bar')
 
 #### Standalone
 
-You can download [chirashi-event-emitter.js](https://github.com/chirashijs/chirashi-event-emitter/releases/download/1.0.0/chirashi-event-emitter.js) or [chirashi-event-emitter.min.js](https://github.com/chirashijs/chirashi/releases/download/1.0.0/chirashi-event-emitter.min.js) and load it using a script tag. You can also use CDN version of those files from unpkg using the link [https://unpkg.com/chirashi@latest/dist/chirashi-event-emitter.min.js](https://unpkg.com/chirashi@latest/dist/chirashi-event-emitter.min.js). It'll create an instance of ChirashiEventEmitter on your window. Then use as following example
+You can download [chirashi-event-emitter.js](https://github.com/chirashijs/chirashi-event-emitter/releases/download/2.0.1/chirashi-event-emitter.js) or [chirashi-event-emitter.min.js](https://github.com/chirashijs/chirashi/releases/download/2.0.1/chirashi-event-emitter.min.js) and load it using a script tag. You can also use CDN version of those files from unpkg using the link [https://unpkg.com/chirashi@latest/dist/chirashi-event-emitter.min.js](https://unpkg.com/chirashi@latest/dist/chirashi-event-emitter.min.js). It'll create an instance of ChirashiEventEmitter on your window. Then use as following example
 
 ```js
 const emitter = ChirashiEventEmitter()
