@@ -18,7 +18,7 @@
   "scripts": {
     "build": "NODE_ENV=production node build/build.js && npm run build:flow",
     "build:flow": "flow gen-flow-files ./lib --out-dir=./dist",
-    "dev:test": "NODE_ENV=test karma start build/karma.dev.conf.js",
+    "dev:test": "NODE_ENV=test jest --watchAll",
     "test:unit": "NODE_ENV=test jest",
     "test:cover": "NODE_ENV=test jest --coverage",
     "test": "npm run lint && npm run flow && npm run test:cover",
