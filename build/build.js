@@ -57,13 +57,7 @@ const targets = [
       file.splice(-1, 0, 'min')
       file = file.join('.')
 
-      const minified = banner + '\n' + uglify.minify(code, {
-        fromString: true,
-        output: {
-          screw_ie8: true,
-          ascii_only: true
-        }
-      }).code
+      const minified = banner + '\n' + uglify.minify(code).code
 
       const minifiedFile = file.split('/').pop()
       console.log(`${blue(minifiedFile)} ${green(`${getSize(minified)}kb`)}`)
