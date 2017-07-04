@@ -1,6 +1,6 @@
 {
   "name": "chirashi-event-emitter",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Simplest event emitter",
   "keywords": [
     "events",
@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "build": "NODE_ENV=production node build/build.js && npm run build:flow",
-    "build:flow": "flow gen-flow-files ./lib --out-dir=./dist",
+    "build:flow": "flow gen-flow-files ./lib/index.js --out-dir=./dist",
     "dev:test": "NODE_ENV=test jest --watchAll",
     "test:unit": "NODE_ENV=test jest",
     "test:cover": "NODE_ENV=test jest --coverage",

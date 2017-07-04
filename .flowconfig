@@ -4,7 +4,8 @@
 .*/build/.*
 .*/dist/.*
 .*/node_modules/.*
-.*/test/.*
+.*/__tests__/.*
+.*/coverage/.*
 
 [libs]
 ./lib
