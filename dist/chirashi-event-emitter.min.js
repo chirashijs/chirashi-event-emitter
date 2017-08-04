@@ -1,5 +1,5 @@
 /**
- * ChirashiEventEmitter.js v2.0.2
+ * ChirashiEventEmitter.js v2.0.3
  * (c) 2017 Alex Toudic
  * Released under MIT License.
  **/

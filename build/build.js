@@ -72,9 +72,9 @@ mkdirp.sync(path)
 
 rollup
   .rollup(config)
-  .then(bundle => {
+  .then(async bundle => {
     for (const target of targets) {
-      const result = bundle.generate(target.options)
+      const result = await bundle.generate(target.options)
 
       const file = target.file
 
